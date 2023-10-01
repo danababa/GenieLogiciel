@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-09-26T14:07:19" hostname="DANA-S-LAPTOP" time="0.087">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-10-01T19:54:16" hostname="DANA-S-LAPTOP" time="0.058">
   <properties/>
-  <testcase name="Test name is not Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.066"/>
-  <testcase name="Test Sulfuras, Hand of Ragnaros" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="Test name is not Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.038"/>
+  <testcase name="Test Sulfuras, Hand of Ragnaros" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
-  <testcase name="Test quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="Test quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test quality &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test Sulfuras, Hand of Ragnaros" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test SellIn &gt; 11" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test SellIn &lt; 11" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
