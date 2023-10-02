@@ -42,6 +42,15 @@ class GildedRoseTest {
   app.updateQuality();
   assertEquals(0, element.quality, "quantity less than zero");
   }
+  @Test 
+  @DisplayName("Test quality <= 0 ")
+  void testQuality2(){
+  Item element = new Item("foo", 0, 0);
+  GildedRose app = new GildedRose(new Item[] {element});
+  app.updateQuality();
+  assertEquals(0, element.quality, "quantity less than zero");
+  }
+
 
   // if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
   @Test 
@@ -66,7 +75,7 @@ class GildedRoseTest {
   @Test 
   @DisplayName("Test quality > 50 if name is Backstage passes to a TAFKAL80ETC concert ")
   void testLT(){
-  Item element= new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49);
+  Item element= new Item("Backstage passes to a TAFKAL80ETC concert", 10, 50);
   GildedRose app = new GildedRose(new Item[] {element});
   app.updateQuality();
   assertEquals(50, element.quality, "quantity greater than fifty");
@@ -82,7 +91,7 @@ class GildedRoseTest {
   }
 
   @Test 
-  @DisplayName("Test quality < 50 with sellIn > 0")
+  @DisplayName("Test quality > 50 with sellIn > 0")
   void testGT3(){
   Item element = new Item("Backstage passes to a TAFKAL80ETC concert", 1, 51);
   GildedRose app = new GildedRose(new Item[] {element});
@@ -108,6 +117,15 @@ class GildedRoseTest {
   assertEquals(8, element.sellIn, "SellIn less than eleven");
   }
 
+   @Test 
+  @DisplayName("Test SellIn = 11 ")
+  void testSellInEq(){
+  Item element = new Item("Backstage passes to a TAFKAL80ETC concert",11, 0);
+  GildedRose app = new GildedRose(new Item[] {element});
+  app.updateQuality();
+  assertEquals(10, element.sellIn, "SellIn less than eleven");
+  }
+
   @Test 
   @DisplayName("Test SellIn > 11 ")
   void testSellInGT(){
@@ -116,6 +134,14 @@ class GildedRoseTest {
   app.updateQuality();
   assertEquals(11, element.sellIn, "SellIn greater than eleven");
   }
+
+  @Test 
+  @DisplayName("Test toString")
+  void toStringTest(){
+  Item element = new Item("Aged Brie", 12, 0);
+  assertEquals("Aged Brie, 12, 0", element.toString(), "name not in correct format");
+  }
+
 
 
 

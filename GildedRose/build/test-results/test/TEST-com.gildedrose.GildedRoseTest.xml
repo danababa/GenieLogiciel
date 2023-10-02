@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2023-10-02T07:02:46" hostname="DANA-S-LAPTOP" time="0.05">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2023-10-02T08:01:30" hostname="DANA-S-LAPTOP" time="0.066">
   <properties/>
-  <testcase name="Test name is not Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.03"/>
-  <testcase name="Test quality &lt; 50 with sellIn &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
-  <testcase name="Test quality &lt; 50 with sellIn &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test name is not Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.024"/>
+  <testcase name="Test quality &gt; 50 with sellIn &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test quality &lt; 50 with sellIn &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test Sulfuras, Hand of Ragnaros" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test Sulfuras, Hand of Ragnaros with sellIn &lt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test quality &gt; 50 if name is Backstage passes to a TAFKAL80ETC concert" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test quality &gt; 50 if name is Backstage passes to a TAFKAL80ETC concert" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test quality &lt;= 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test quality &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test quality &lt; 50 with name Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test toString" classname="com.gildedrose.GildedRoseTest" time="0.013"/>
+  <testcase name="Test quality &lt; 50 with name Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test SellIn = 11" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test SellIn &gt; 11" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test SellIn &lt; 11" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test name of Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
