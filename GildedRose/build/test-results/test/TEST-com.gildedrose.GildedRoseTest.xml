@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2023-10-04T08:00:21" hostname="DANA-S-LAPTOP" time="0.078">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2023-10-06T12:13:48" hostname="DANA-S-LAPTOP" time="0.079">
   <properties/>
   <testcase name="Test name is not Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.024"/>
   <testcase name="Test quality &gt; 50 with sellIn &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test quality &lt; 50 with sellIn &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test items[i].quality = items[i].quality + 1;" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test items[i].quality = items[i].quality + 1;" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test SellIn = 6 and Quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test Sulfuras, Hand of Ragnaros" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test Quality = 50" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test Sulfuras, Hand of Ragnaros" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test Quality = 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test quality &gt; 50 if name is Backstage passes to a TAFKAL80ETC concert" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test SellIn &lt; 6 and Quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test SellIn = 11 and Quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test quality -1" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test SellIn &lt; 11 avec nom different que Backstage" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test quality &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test SellIn &lt; 11 avec nom different que Backstage" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test quality &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
   <testcase name="Test toString" classname="com.gildedrose.GildedRoseTest" time="0.013"/>
   <testcase name="Test quality &lt; 50 with name Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test SellIn &gt; 11" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test SellIn &lt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test SellIn &gt; 11" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test SellIn &lt; 11" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test name of Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test name of Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

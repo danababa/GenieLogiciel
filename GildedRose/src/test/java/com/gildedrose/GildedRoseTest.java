@@ -70,7 +70,7 @@ class GildedRoseTest {
   Item element= new Item("Backstage passes to a TAFKAL80ETC concert", 10, 50);
   GildedRose app = new GildedRose(new Item[] {element});
   app.updateQuality();
-  assertEquals(50, element.quality, "quantity greater than fifty");
+  assertEquals(50, element.quality, "quality greater than fifty and name is Backstage passes to a TAFKAL80ETC concert");
   }
 
   @Test 
@@ -79,7 +79,7 @@ class GildedRoseTest {
   Item element= new Item("Backstage passes to a TAFKAL80ETC concert", 1, 49);
   GildedRose app = new GildedRose(new Item[] {element});
   app.updateQuality();
-  assertEquals(50, element.quality, "quantity greater than fifty");
+  assertEquals(50, element.quality, "quality greater than fifty and sellIn greater than 0");
   }
 
   @Test 
@@ -88,7 +88,7 @@ class GildedRoseTest {
   Item element = new Item("Backstage passes to a TAFKAL80ETC concert", 1, 51);
   GildedRose app = new GildedRose(new Item[] {element});
   app.updateQuality();
-  assertEquals(51, element.quality, "quantity greater than fifty");
+  assertEquals(51, element.quality, "quality greater than fifty");
   }
 
   @Test 
@@ -97,7 +97,7 @@ class GildedRoseTest {
   Item element = new Item("Sulfuras, Hand of Ragnaros", 0, 50);
   GildedRose app = new GildedRose(new Item[] {element});
   app.updateQuality();
-  assertEquals(50, element.quality, "quantity greater than fifty");
+  assertEquals(50, element.quality, "quality equal to fifty");
   }
 
   @Test 
@@ -106,7 +106,7 @@ class GildedRoseTest {
   Item element = new Item("Aged Brie", -1, 49);
   GildedRose app = new GildedRose(new Item[] {element});
   app.updateQuality();
-  assertEquals(50, element.quality, "quantity greater than fifty");
+  assertEquals(50, element.quality, "quality less than fifty");
   }
 
   @Test 
@@ -124,7 +124,7 @@ class GildedRoseTest {
   Item element = new Item("Aged Brie", 9, 0);
   GildedRose app = new GildedRose(new Item[] {element});
   app.updateQuality();
-  assertEquals(1, element.quality, "SellIn less than eleven");
+  assertEquals(1, element.quality, "SellIn less than eleven with name Aged Brie");
   }
 
   @Test 
@@ -151,7 +151,7 @@ class GildedRoseTest {
     Item element = new Item("Backstage passes to a TAFKAL80ETC concert", 10, 48);
     GildedRose app = new GildedRose(new Item[] {element});
     app.updateQuality();
-    assertEquals(50, element.quality, "sellIn equal to eleven");
+    assertEquals(50, element.quality, "add 1 to quality");
   }
 
   @Test 
@@ -160,7 +160,7 @@ class GildedRoseTest {
     Item element = new Item("Backstage passes to a TAFKAL80ETC concert", 6, 10);
     GildedRose app = new GildedRose(new Item[] {element});
     app.updateQuality();
-    assertEquals(12, element.quality, "sellIn equal to eleven");
+    assertEquals(12, element.quality, "sellIn equal to six");
   }
   @Test 
   @DisplayName("Test SellIn < 6 and Quality < 50 ")
@@ -168,10 +168,26 @@ class GildedRoseTest {
     Item element = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 46);
     GildedRose app = new GildedRose(new Item[] {element});
     app.updateQuality();
-    assertEquals(49, element.quality, "sellIn equal to eleven");
+    assertEquals(49, element.quality, "sellIn less than 5");
   }
 
+  @Test 
+  @DisplayName("Test SellIn < 0 ")
+  void testSellNeg(){
+    Item element = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 10);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+    assertEquals(0, element.quality, "sellIn less than 0");
+  }
 
+  @Test 
+  @DisplayName("Test quality -1 ")
+  void testQualitySub(){
+    Item element = new Item("Aged Brie", -1, 48);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+    assertEquals(50, element.quality, "sellIn equal to eleven");
+  }
   
   @Test 
   @DisplayName("Test toString")
@@ -179,8 +195,5 @@ class GildedRoseTest {
   Item element = new Item("Aged Brie", 12, 0);
   assertEquals("Aged Brie, 12, 0", element.toString(), "name not in correct format");
   }
-
-
-
 }
 
