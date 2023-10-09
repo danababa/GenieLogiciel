@@ -162,6 +162,7 @@ class GildedRoseTest {
     app.updateQuality();
     assertEquals(12, element.quality, "sellIn equal to six");
   }
+  
   @Test 
   @DisplayName("Test SellIn < 6 and Quality < 50 ")
   void testSellInEq6(){
