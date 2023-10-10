@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.043s</div>
+<div class="counter">0.051s</div>
 <p>duration</p>
 </div>
 </td>
@@ -70,15 +70,15 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="testSellInGT()"></a>
-<h3 class="failures">Test SellIn &gt; 11</h3>
+<a name="testQualitySub()"></a>
+<h3 class="failures">Test quality -1</h3>
 <span class="code">
-<pre>org.opentest4j.AssertionFailedError: SellIn greater than eleven ==&gt; expected: &lt;11&gt; but was: &lt;10&gt;
+<pre>org.opentest4j.AssertionFailedError: sellIn equal to eleven ==&gt; expected: &lt;50&gt; but was: &lt;49&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
 	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:334)
-	at app//com.gildedrose.GildedRoseTest.testSellInGT(GildedRoseTest.java:136)
+	at app//com.gildedrose.GildedRoseTest.testQualitySub(GildedRoseTest.java:190)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.3.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -143,15 +143,15 @@
 </span>
 </div>
 <div class="test">
-<a name="testSellInLT()"></a>
-<h3 class="failures">Test SellIn &lt; 11</h3>
+<a name="testSellInLTAged()"></a>
+<h3 class="failures">Test SellIn &lt; 11 avec nom different que Backstage</h3>
 <span class="code">
-<pre>org.opentest4j.AssertionFailedError: SellIn less than eleven ==&gt; expected: &lt;8&gt; but was: &lt;7&gt;
+<pre>org.opentest4j.AssertionFailedError: SellIn less than eleven with name Aged Brie ==&gt; expected: &lt;1&gt; but was: &lt;0&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
 	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:334)
-	at app//com.gildedrose.GildedRoseTest.testSellInLT(GildedRoseTest.java:118)
+	at app//com.gildedrose.GildedRoseTest.testSellInLTAged(GildedRoseTest.java:127)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.3.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -230,13 +230,13 @@
 <tr>
 <td class="success">Test name is not Aged Brie</td>
 <td class="success">testAgedBrie()</td>
-<td class="success">0.016s</td>
+<td class="success">0.024s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test name of Backstage passes</td>
 <td class="success">testBackstage()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -254,13 +254,13 @@
 <tr>
 <td class="success">Test quality &gt; 50 if name is Backstage passes to a TAFKAL80ETC concert</td>
 <td class="success">testLT()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test quality &lt; 50 with sellIn &gt; 0</td>
 <td class="success">testLT3()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -272,7 +272,7 @@
 <tr>
 <td class="success">Test Sulfuras, Hand of Ragnaros</td>
 <td class="success">testName2()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -288,27 +288,27 @@
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Test quality -1</td>
-<td class="success">testQualitySub()</td>
-<td class="success">0s</td>
-<td class="success">passed</td>
+<td class="failures">Test quality -1</td>
+<td class="failures">testQualitySub()</td>
+<td class="failures">0.007s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Test Quality = 50</td>
 <td class="success">testSell6()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test items[i].quality = items[i].quality + 1;</td>
 <td class="success">testSellInEq11()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test SellIn &lt; 6 and Quality &lt; 50</td>
 <td class="success">testSellInEq6()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -324,22 +324,22 @@
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">Test SellIn &gt; 11</td>
-<td class="failures">testSellInGT()</td>
-<td class="failures">0.006s</td>
-<td class="failures">failed</td>
+<td class="success">Test SellIn &gt; 11</td>
+<td class="success">testSellInGT()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">Test SellIn &lt; 11</td>
-<td class="failures">testSellInLT()</td>
-<td class="failures">0.001s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">Test SellIn &lt; 11 avec nom different que Backstage</td>
-<td class="success">testSellInLTAged()</td>
+<td class="success">Test SellIn &lt; 11</td>
+<td class="success">testSellInLT()</td>
 <td class="success">0.001s</td>
 <td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Test SellIn &lt; 11 avec nom different que Backstage</td>
+<td class="failures">testSellInLTAged()</td>
+<td class="failures">0.001s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Test SellIn &lt; 0</td>
@@ -350,7 +350,7 @@
 <tr>
 <td class="success">Test toString</td>
 <td class="success">toStringTest()</td>
-<td class="success">0.009s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -363,7 +363,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.3</a> at Oct 9, 2023, 11:53:03 PM</p>
+<a href="http://www.gradle.org">Gradle 8.3</a> at Oct 10, 2023, 5:07:28 PM</p>
 </div>
 </div>
 </body>
