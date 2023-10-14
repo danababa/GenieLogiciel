@@ -24,6 +24,10 @@ class GildedRose {
           //Legendary item, never has to be sold ot decreases in Quality
           break;
         
+        case "Conjured":
+            updateConjuredQuality(items[i]);
+            break;
+
         default:
           updateDefaultItemQuality(items[i]);
           break;
@@ -34,18 +38,18 @@ class GildedRose {
 
   
   private void updateAgedBrieQuality(Item item){
-    if (item.quality<50){
+    if (item.quality < 50){
       item.quality++;
     }
     item.sellIn--;
 
-    if(item.sellIn<0 && item.quality<50){
+    if(item.sellIn < 0 && item.quality < 50){
       item.quality++;
     }
   }
 
   private void updatedBackstagePassesQuality(Item item){
-    if(item.quality<50){
+    if(item.quality < 50){
      
       item.quality++;
       
@@ -60,16 +64,26 @@ class GildedRose {
     }
     item.sellIn--;
     
-    if(item.sellIn<0){
+    if(item.sellIn < 0){
       item.quality = 0;
+    }
+  }
+
+  private void updateConjuredQuality(Item item){
+    if (item.quality > 0){
+      item.quality -= 2;
+    }
+    item.sellIn--;
+    if (item.sellIn < 0 && item.quality > 0 ){
+      item.quality -= 2;
     }
   }
 
   private void updateDefaultItemQuality(Item item){
     if (item.sellIn < 0 && item.quality > 0){
-      item.quality-=2;   
+      item.quality -= 2;   
     } else {
-      item.quality=0;
+      item.quality = 0;
     } 
   }
 }
