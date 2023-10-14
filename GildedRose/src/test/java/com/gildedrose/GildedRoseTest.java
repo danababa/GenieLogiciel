@@ -196,5 +196,24 @@ class GildedRoseTest {
   Item element = new Item("Aged Brie", 12, 0);
   assertEquals("Aged Brie, 12, 0", element.toString(), "name not in correct format");
   }
+
+  @Test
+  @DisplayName("Test Conjured item quality decreases by 2 when sellIn is positive")
+  void testConjuredSellInPos(){
+    Item conjured = new Item("Conjured",5,10);
+    GildedRose app = new GildedRose(new Item[]{conjured});
+    app.updateQuality();
+    assertEquals(8,conjured.quality,"Quality should decrease by 2 when sellIn is positive"); 
+  }
+
+  @Test
+  @DisplayName("Test Conjured item quality decreases by 4 when sellIn is negative")
+  void testConjuredSellInNeg(){
+    Item conjured = new Item("Conjured",-1,10);
+    GildedRose app = new GildedRose(new Item[]{conjured});
+    app.updateQuality();
+    assertEquals(6,conjured.quality,"Quality should decrease by 4 when sellIn is negative"); 
+  }
+
 }
 

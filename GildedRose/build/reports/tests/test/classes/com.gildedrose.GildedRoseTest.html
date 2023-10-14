@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">21</div>
+<div class="counter">23</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.051s</div>
+<div class="counter">0.075s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">90%</div>
+<div class="percent">91%</div>
 <p>successful</p>
 </div>
 </td>
@@ -70,15 +70,15 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="testQualitySub()"></a>
-<h3 class="failures">Test quality -1</h3>
+<a name="testConjuredSellInNeg()"></a>
+<h3 class="failures">Test Conjured item quality decreases by 4 when sellIn is negative</h3>
 <span class="code">
-<pre>org.opentest4j.AssertionFailedError: sellIn equal to eleven ==&gt; expected: &lt;50&gt; but was: &lt;49&gt;
+<pre>org.opentest4j.AssertionFailedError: Quality should decrease by 4 when sellIn is negative ==&gt; expected: &lt;6&gt; but was: &lt;8&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
 	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:334)
-	at app//com.gildedrose.GildedRoseTest.testQualitySub(GildedRoseTest.java:190)
+	at app//com.gildedrose.GildedRoseTest.testConjuredSellInNeg(GildedRoseTest.java:215)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.3.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -143,15 +143,15 @@
 </span>
 </div>
 <div class="test">
-<a name="testSellInLTAged()"></a>
-<h3 class="failures">Test SellIn &lt; 11 avec nom different que Backstage</h3>
+<a name="testConjuredSellInPos()"></a>
+<h3 class="failures">Test Conjured item quality decreases by 2 when sellIn is positive</h3>
 <span class="code">
-<pre>org.opentest4j.AssertionFailedError: SellIn less than eleven with name Aged Brie ==&gt; expected: &lt;1&gt; but was: &lt;0&gt;
+<pre>org.opentest4j.AssertionFailedError: Quality should decrease by 2 when sellIn is positive ==&gt; expected: &lt;8&gt; but was: &lt;0&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
 	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:334)
-	at app//com.gildedrose.GildedRoseTest.testSellInLTAged(GildedRoseTest.java:127)
+	at app//com.gildedrose.GildedRoseTest.testConjuredSellInPos(GildedRoseTest.java:206)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.3.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -230,7 +230,7 @@
 <tr>
 <td class="success">Test name is not Aged Brie</td>
 <td class="success">testAgedBrie()</td>
-<td class="success">0.024s</td>
+<td class="success">0.026s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -238,6 +238,18 @@
 <td class="success">testBackstage()</td>
 <td class="success">0.001s</td>
 <td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Test Conjured item quality decreases by 4 when sellIn is negative</td>
+<td class="failures">testConjuredSellInNeg()</td>
+<td class="failures">0.014s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Test Conjured item quality decreases by 2 when sellIn is positive</td>
+<td class="failures">testConjuredSellInPos()</td>
+<td class="failures">0.001s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
 <td class="success">Test quality &gt; 50 with sellIn &gt; 0</td>
@@ -254,13 +266,13 @@
 <tr>
 <td class="success">Test quality &gt; 50 if name is Backstage passes to a TAFKAL80ETC concert</td>
 <td class="success">testLT()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test quality &lt; 50 with sellIn &gt; 0</td>
 <td class="success">testLT3()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -278,55 +290,55 @@
 <tr>
 <td class="success">Test quality &gt; 0</td>
 <td class="success">testQuality()</td>
-<td class="success">0.001s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test quality = 0</td>
 <td class="success">testQuality2()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">Test quality -1</td>
-<td class="failures">testQualitySub()</td>
-<td class="failures">0.007s</td>
-<td class="failures">failed</td>
+<td class="success">Test quality -1</td>
+<td class="success">testQualitySub()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test Quality = 50</td>
 <td class="success">testSell6()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test items[i].quality = items[i].quality + 1;</td>
 <td class="success">testSellInEq11()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test SellIn &lt; 6 and Quality &lt; 50</td>
 <td class="success">testSellInEq6()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test SellIn = 11 and Quality &lt; 50</td>
 <td class="success">testSellInEqT()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test SellIn = 6 and Quality &lt; 50</td>
 <td class="success">testSellInEqT6()</td>
-<td class="success">0.001s</td>
+<td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test SellIn &gt; 11</td>
 <td class="success">testSellInGT()</td>
-<td class="success">0s</td>
+<td class="success">0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -336,10 +348,10 @@
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">Test SellIn &lt; 11 avec nom different que Backstage</td>
-<td class="failures">testSellInLTAged()</td>
-<td class="failures">0.001s</td>
-<td class="failures">failed</td>
+<td class="success">Test SellIn &lt; 11 avec nom different que Backstage</td>
+<td class="success">testSellInLTAged()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Test SellIn &lt; 0</td>
@@ -350,7 +362,7 @@
 <tr>
 <td class="success">Test toString</td>
 <td class="success">toStringTest()</td>
-<td class="success">0.011s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -363,7 +375,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.3</a> at Oct 10, 2023, 5:07:28 PM</p>
+<a href="http://www.gradle.org">Gradle 8.3</a> at Oct 14, 2023, 9:38:39 AM</p>
 </div>
 </div>
 </body>

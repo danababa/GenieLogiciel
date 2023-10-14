@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="21" skipped="0" failures="2" errors="0" timestamp="2023-10-10T15:07:28" hostname="DANA-S-LAPTOP" time="0.08">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="23" skipped="0" failures="2" errors="0" timestamp="2023-10-14T07:38:39" hostname="DANA-S-LAPTOP" time="0.116">
   <properties/>
-  <testcase name="Test name is not Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.024"/>
+  <testcase name="Test name is not Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.026"/>
   <testcase name="Test quality &gt; 50 with sellIn &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test quality &lt; 50 with sellIn &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test items[i].quality = items[i].quality + 1;" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test SellIn = 6 and Quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test quality &lt; 50 with sellIn &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test items[i].quality = items[i].quality + 1;" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test SellIn = 6 and Quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test Sulfuras, Hand of Ragnaros" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test Quality = 50" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test Quality = 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test quality &gt; 50 if name is Backstage passes to a TAFKAL80ETC concert" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test SellIn &lt; 6 and Quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test SellIn = 11 and Quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test quality -1" classname="com.gildedrose.GildedRoseTest" time="0.007">
-    <failure message="org.opentest4j.AssertionFailedError: sellIn equal to eleven ==&gt; expected: &lt;50&gt; but was: &lt;49&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: sellIn equal to eleven ==&gt; expected: &lt;50&gt; but was: &lt;49&gt;
+  <testcase name="Test quality &gt; 50 if name is Backstage passes to a TAFKAL80ETC concert" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test SellIn &lt; 6 and Quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test SellIn = 11 and Quality &lt; 50" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test quality -1" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test SellIn &lt; 11 avec nom different que Backstage" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test quality &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="Test toString" classname="com.gildedrose.GildedRoseTest" time="0.016"/>
+  <testcase name="Test Conjured item quality decreases by 4 when sellIn is negative" classname="com.gildedrose.GildedRoseTest" time="0.014">
+    <failure message="org.opentest4j.AssertionFailedError: Quality should decrease by 4 when sellIn is negative ==&gt; expected: &lt;6&gt; but was: &lt;8&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Quality should decrease by 4 when sellIn is negative ==&gt; expected: &lt;6&gt; but was: &lt;8&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
 	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:334)
-	at app//com.gildedrose.GildedRoseTest.testQualitySub(GildedRoseTest.java:190)
+	at app//com.gildedrose.GildedRoseTest.testConjuredSellInNeg(GildedRoseTest.java:215)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.3.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,14 +86,13 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Test quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test SellIn &lt; 11 avec nom different que Backstage" classname="com.gildedrose.GildedRoseTest" time="0.001">
-    <failure message="org.opentest4j.AssertionFailedError: SellIn less than eleven with name Aged Brie ==&gt; expected: &lt;1&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: SellIn less than eleven with name Aged Brie ==&gt; expected: &lt;1&gt; but was: &lt;0&gt;
+  <testcase name="Test Conjured item quality decreases by 2 when sellIn is positive" classname="com.gildedrose.GildedRoseTest" time="0.001">
+    <failure message="org.opentest4j.AssertionFailedError: Quality should decrease by 2 when sellIn is positive ==&gt; expected: &lt;8&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Quality should decrease by 2 when sellIn is positive ==&gt; expected: &lt;8&gt; but was: &lt;0&gt;
 	at app//org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:54)
 	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:195)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:152)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:334)
-	at app//com.gildedrose.GildedRoseTest.testSellInLTAged(GildedRoseTest.java:127)
+	at app//com.gildedrose.GildedRoseTest.testConjuredSellInPos(GildedRoseTest.java:206)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.3.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.3.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,11 +155,9 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="Test quality &gt; 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test toString" classname="com.gildedrose.GildedRoseTest" time="0.011"/>
   <testcase name="Test quality &lt; 50 with name Aged Brie" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test SellIn &lt; 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test SellIn &gt; 11" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test SellIn &gt; 11" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test SellIn &lt; 11" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test name of Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
